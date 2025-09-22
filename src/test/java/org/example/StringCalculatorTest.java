@@ -6,12 +6,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class StringCalculatorTest {
     @Test
-    void add_test() {
+    void add_empty_string() {
         assertThat(new StringCalculator().add("")).isEqualTo(0);
     }
 
     @Test
-    void add_one_number() {
+    void add_number_1() {
         assertThat(new StringCalculator().add("1")).isEqualTo(1);
     }
 }
