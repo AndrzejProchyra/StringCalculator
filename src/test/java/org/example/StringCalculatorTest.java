@@ -9,4 +9,9 @@ class StringCalculatorTest {
     void add_test() {
         assertThat(new StringCalculator().add("")).isEqualTo(0);
     }
+
+    @Test
+    void add_one_number() {
+        assertThat(new StringCalculator().add("1")).isEqualTo(1);
+    }
 }
