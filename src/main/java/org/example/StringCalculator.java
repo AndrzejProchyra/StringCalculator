@@ -8,7 +8,7 @@ public class StringCalculator {
             String[] splitNumbers = numbers.split(",");
             if (splitNumbers.length == 2)
                 return Integer.parseInt(splitNumbers[0]) + Integer.parseInt(splitNumbers[1]);
-            return Integer.parseInt(splitNumbers[0]) + Integer.parseInt(splitNumbers[1]) + 3;
+            return Integer.parseInt(splitNumbers[0]) + Integer.parseInt(splitNumbers[1]) + Integer.parseInt(splitNumbers[2]);
         }
         return Integer.parseInt(numbers);
     }

@@ -30,5 +30,6 @@ class StringCalculatorTest {
     @Test
     void add_three_numbers() {
         assertThat(new StringCalculator().add("1,2,3")).isEqualTo(6);
+        assertThat(new StringCalculator().add("1,2,4")).isEqualTo(7);
     }
 }
