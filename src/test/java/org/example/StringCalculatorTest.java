@@ -26,4 +26,9 @@ class StringCalculatorTest {
     void add_two_numbers() {
         assertThat(new StringCalculator().add("1,2")).isEqualTo(3);
     }
+
+    @Test
+    void add_three_numbers() {
+        assertThat(new StringCalculator().add("1,2,3")).isEqualTo(6);
+    }
 }
