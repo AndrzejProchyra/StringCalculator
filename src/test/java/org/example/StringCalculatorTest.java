@@ -33,9 +33,9 @@ class StringCalculatorTest {
         assertThat(new StringCalculator().add("1,2,4")).isEqualTo(7);
     }
 
-//    @Test
-//    void add_seven_numbers() {
-//        assertThat(new StringCalculator().add("2,5,8,1,9,3,7"))
-//                .isEqualTo(35);
-//    }
+    @Test
+    void add_seven_numbers() {
+        assertThat(new StringCalculator().add("2,5,8,1,9,3,7"))
+                .isEqualTo(35);
+    }
 }

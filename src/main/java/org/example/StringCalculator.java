@@ -9,9 +9,17 @@ public class StringCalculator {
 
             int sum = 0;
             if (splitNumbers.length == 2) {
-                sum += Integer.parseInt(splitNumbers[0]) + Integer.parseInt(splitNumbers[1]);
-            } else {
-                sum += Integer.parseInt(splitNumbers[0]) + Integer.parseInt(splitNumbers[1]) + Integer.parseInt(splitNumbers[2]);
+                for (int i = 0; i < 2; i++) {
+                    sum += Integer.parseInt(splitNumbers[i]);
+                }
+            } else if (splitNumbers.length == 3) {
+                for (int i = 0; i < 3; i++) {
+                    sum += Integer.parseInt(splitNumbers[i]);
+                }
+            } else if (splitNumbers.length == 7) {
+                for (int i = 0; i < 7; i++) {
+                    sum += Integer.parseInt(splitNumbers[i]);
+                }
             }
             return sum;
         }
