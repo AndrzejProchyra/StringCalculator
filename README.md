@@ -18,3 +18,8 @@
 
 Next time
 - Continue with the String Calculator kata
+
+## 29/09/2025
+1. How did that feel?
+2. What did we do that we want to make sure we do more of?
+3. What can we try next time?
