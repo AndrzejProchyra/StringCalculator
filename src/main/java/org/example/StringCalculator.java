@@ -8,18 +8,8 @@ public class StringCalculator {
             String[] splitNumbers = numbers.split(",");
 
             int sum = 0;
-            if (splitNumbers.length == 2) {
-                for (int i = 0; i < 2; i++) {
-                    sum += Integer.parseInt(splitNumbers[i]);
-                }
-            } else if (splitNumbers.length == 3) {
-                for (int i = 0; i < 3; i++) {
-                    sum += Integer.parseInt(splitNumbers[i]);
-                }
-            } else if (splitNumbers.length == 7) {
-                for (int i = 0; i < 7; i++) {
-                    sum += Integer.parseInt(splitNumbers[i]);
-                }
+            for (String splitNumber : splitNumbers) {
+                sum += Integer.parseInt(splitNumber);
             }
             return sum;
         }

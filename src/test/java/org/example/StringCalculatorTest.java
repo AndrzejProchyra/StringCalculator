@@ -38,4 +38,6 @@ class StringCalculatorTest {
         assertThat(new StringCalculator().add("2,5,8,1,9,3,7"))
                 .isEqualTo(35);
     }
+
+    //TODO: Add more tests for any numbers
 }
