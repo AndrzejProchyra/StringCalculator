@@ -1,6 +1,8 @@
 package org.example;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -10,19 +12,14 @@ class StringCalculatorTest {
         assertThat(new StringCalculator().add("")).isEqualTo(0);
     }
 
-    @Test
-    void add_number_1() {
-        assertThat(new StringCalculator().add("1")).isEqualTo(1);
-    }
-
-    @Test
-    void add_number_2() {
-        assertThat(new StringCalculator().add("2")).isEqualTo(2);
-    }
-
-    @Test
-    void add_number_3() {
-        assertThat(new StringCalculator().add("3")).isEqualTo(3);
+    @ParameterizedTest(name = "Adding \"{0}\" gives {1}")
+    @CsvSource({
+            "1, 1",
+            "2, 2",
+            "3, 3",
+    })
+    void add_one_number(String number, int expected) {
+        assertThat(new StringCalculator().add(number)).isEqualTo(expected);
     }
 
     @Test
