@@ -45,7 +45,7 @@ class StringCalculatorTest {
     }
 
     @Test
-    void add_numbers_separated_by_a_newline() {
+    void add_two_numbers_separated_by_a_newline() {
         assertAdd("1\n2", 3);
         assertAdd("1\n2\n5\n3", 11);
     }
@@ -53,6 +53,11 @@ class StringCalculatorTest {
     @Test
     void add_multiple_numbers_separated_by_commas_and_newlines() {
         assertAdd("1\n2,3", 6);
+    }
+
+    @Test
+    void add_two_numbers_with_custom_delimiter() {
+        assertAdd("//;\n1;2", 3);
     }
 
     private static void assertAdd(String numbers, int expected) {
