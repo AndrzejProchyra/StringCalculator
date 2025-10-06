@@ -45,8 +45,9 @@ class StringCalculatorTest {
     }
 
     @Test
-    void add_two_numbers_separated_by_a_newline() {
+    void add_numbers_separated_by_a_newline() {
         assertAdd("1\n2", 3);
+        assertAdd("1\n2\n5\n3", 11);
     }
 
     @Test
