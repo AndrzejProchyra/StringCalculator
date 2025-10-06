@@ -44,4 +44,10 @@ class StringCalculatorTest {
                 Arguments.of("2,5,8,1,9,3,7", 35)
         );
     }
+
+    @Test
+    void add_two_numbers_separated_by_a_newline() {
+        assertThat(new StringCalculator().add("1\n2"))
+                .isEqualTo(3);
+    }
 }

@@ -13,6 +13,15 @@ public class StringCalculator {
             }
             return sum;
         }
+        if (numbers.contains("\n")) {
+            String[] splitNumbers = numbers.split("\n");
+
+            int sum = 0;
+            for (String splitNumber : splitNumbers) {
+                sum += Integer.parseInt(splitNumber);
+            }
+            return sum;
+        }
         return Integer.parseInt(numbers);
     }
 }
