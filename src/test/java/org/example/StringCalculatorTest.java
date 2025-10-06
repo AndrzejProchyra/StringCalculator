@@ -2,7 +2,11 @@ package org.example;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -27,17 +31,17 @@ class StringCalculatorTest {
         assertThat(new StringCalculator().add("1,2")).isEqualTo(3);
     }
 
-    @Test
-    void add_three_numbers() {
-        assertThat(new StringCalculator().add("1,2,3")).isEqualTo(6);
-        assertThat(new StringCalculator().add("1,2,4")).isEqualTo(7);
+    @ParameterizedTest
+    @MethodSource("provideNumberStrings")
+    void add_unknown_amount_of_numbers(String numbers, int expected) {
+        assertThat(new StringCalculator().add(numbers))
+                .isEqualTo(expected);
     }
 
-    @Test
-    void add_seven_numbers() {
-        assertThat(new StringCalculator().add("2,5,8,1,9,3,7"))
-                .isEqualTo(35);
+    private static Stream<Arguments> provideNumberStrings() {
+        return Stream.of(
+                Arguments.of("1,2,3", 6),
+                Arguments.of("2,5,8,1,9,3,7", 35)
+        );
     }
-
-    //TODO: Add more tests for any numbers
 }
