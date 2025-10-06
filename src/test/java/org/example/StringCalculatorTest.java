@@ -23,19 +23,18 @@ class StringCalculatorTest {
             "3, 3",
     })
     void add_one_number(String number, int expected) {
-        assertThat(new StringCalculator().add(number)).isEqualTo(expected);
+        assertAdd(number, expected);
     }
 
     @Test
     void add_two_numbers() {
-        assertThat(new StringCalculator().add("1,2")).isEqualTo(3);
+        assertAdd("1,2", 3);
     }
 
     @ParameterizedTest
     @MethodSource("provideNumberStrings")
     void add_unknown_amount_of_numbers(String numbers, int expected) {
-        assertThat(new StringCalculator().add(numbers))
-                .isEqualTo(expected);
+        assertAdd(numbers, expected);
     }
 
     private static Stream<Arguments> provideNumberStrings() {
@@ -47,7 +46,11 @@ class StringCalculatorTest {
 
     @Test
     void add_two_numbers_separated_by_a_newline() {
-        assertThat(new StringCalculator().add("1\n2"))
-                .isEqualTo(3);
+        assertAdd("1\n2", 3);
+    }
+
+    private static void assertAdd(String numbers, int expected) {
+        assertThat(new StringCalculator().add(numbers))
+                .isEqualTo(expected);
     }
 }
