@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class StringCalculatorTest {
     @Test
     void add_empty_string() {
-        assertThat(new StringCalculator().add("")).isEqualTo(0);
+        assertThat(new StringCalculator().add("")).isZero();
     }
 
     @ParameterizedTest(name = "Adding \"{0}\" gives {1}")
