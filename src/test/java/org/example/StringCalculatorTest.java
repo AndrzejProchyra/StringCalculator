@@ -56,8 +56,13 @@ class StringCalculatorTest {
     }
 
     @Test
-    void add_two_numbers_with_custom_delimiter() {
+    void add_two_numbers_with_semicolon_custom_delimiter() {
         assertAdd("//;\n1;2", 3);
+    }
+
+    @Test
+    void add_two_numbers_with_pipe_custom_delimiter() {
+        assertAdd("//|\n5|7", 12);
     }
 
     private static void assertAdd(String numbers, int expected) {
