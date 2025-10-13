@@ -42,3 +42,9 @@ Next time
    - Switching on green or ping pong?
 4. What we experimented with:
    - mob.sh - Required some setup, but worked well with using the URL so we could both hear
+
+## 06/10/2025
+- Andrzej: Felt good again, making progress
+- Rob: Feeling frustrated/unsure, it is hard to "slow" down
+- We tried ping ponging this time
+- Created an inbox
