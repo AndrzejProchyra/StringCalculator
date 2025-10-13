@@ -74,7 +74,7 @@ class StringCalculatorTest {
     }
 
     @Test
-    void add_with_negative_number_trows() {
+    void add_with_negative_number_throws() {
         assertThatThrownBy(() -> new StringCalculator().add("1,-1"))
                 .hasMessage("Negatives not allowed: -1");
     }

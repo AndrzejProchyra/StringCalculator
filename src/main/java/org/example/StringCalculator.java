@@ -16,11 +16,16 @@ public class StringCalculator {
 
         int sum = 0;
         for (String splitNumber : splitNumbers) {
-            if (Integer.parseInt(splitNumber) < 0) {
-                throw new IllegalArgumentException("Negatives not allowed: " + splitNumber);
-            }
-            sum += Integer.parseInt(splitNumber);
+            int n = Integer.parseInt(splitNumber);
+            requireNonNegative(n);
+            sum += n;
         }
         return sum;
+    }
+
+    private static void requireNonNegative(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("Negatives not allowed: " + n);
+        }
     }
 }
