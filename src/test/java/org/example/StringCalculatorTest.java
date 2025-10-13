@@ -1,5 +1,6 @@
 package org.example;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -63,6 +64,12 @@ class StringCalculatorTest {
     @Test
     void add_two_numbers_with_pipe_custom_delimiter() {
         assertAdd("//|\n5|7", 12);
+    }
+
+    @Test
+    @Disabled("Failing. We are not sure if multiple delimiters should be supported.")
+    void add_two_numbers_with_pipe_custom_delimiter_and_comma_default_delimiter() {
+        assertAdd("//|\n5|7,4", 16);
     }
 
     private static void assertAdd(String numbers, int expected) {
