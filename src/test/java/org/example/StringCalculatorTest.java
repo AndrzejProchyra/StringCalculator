@@ -10,6 +10,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class StringCalculatorTest {
     @Test
@@ -70,6 +71,12 @@ class StringCalculatorTest {
     @Disabled("Failing. We are not sure if multiple delimiters should be supported.")
     void add_two_numbers_with_pipe_custom_delimiter_and_comma_default_delimiter() {
         assertAdd("//|\n5|7,4", 16);
+    }
+
+    @Test
+    void add_with_negative_number_trows() {
+        assertThatThrownBy(() -> new StringCalculator().add("1,-1"))
+                .hasMessage("Negatives not allowed: -1");
     }
 
     private static void assertAdd(String numbers, int expected) {

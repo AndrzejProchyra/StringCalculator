@@ -16,6 +16,9 @@ public class StringCalculator {
 
         int sum = 0;
         for (String splitNumber : splitNumbers) {
+            if (Integer.parseInt(splitNumber) < 0) {
+                throw new IllegalArgumentException("Negatives not allowed: " + splitNumber);
+            }
             sum += Integer.parseInt(splitNumber);
         }
         return sum;
