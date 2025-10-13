@@ -4,10 +4,8 @@ public class StringCalculator {
     public int add(String numbers) {
         String delimiter = ",";
         boolean hasNewDelimiter = numbers.startsWith("//");
-        if (hasNewDelimiter) {
-            delimiter = String.valueOf(numbers.charAt(2));
-            numbers = numbers.substring(4);
-        }
+        delimiter = getNewDelimiter(numbers, hasNewDelimiter, delimiter);
+        numbers = getNewNumbers(numbers, hasNewDelimiter);
 
         if (numbers.isEmpty())
             return 0;
@@ -21,6 +19,20 @@ public class StringCalculator {
             sum += n;
         }
         return sum;
+    }
+
+    private static String getNewNumbers(String numbers, boolean hasNewDelimiter) {
+        if (hasNewDelimiter) {
+            numbers = numbers.substring(4);
+        }
+        return numbers;
+    }
+
+    private static String getNewDelimiter(String numbers, boolean hasNewDelimiter, String delimiter) {
+        if (hasNewDelimiter) {
+            delimiter = String.valueOf(numbers.charAt(2));
+        }
+        return delimiter;
     }
 
     private static void requireNonNegative(int n) {
