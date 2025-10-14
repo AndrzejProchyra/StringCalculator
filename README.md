@@ -48,3 +48,10 @@ Next time
 - Rob: Feeling frustrated/unsure, it is hard to "slow" down
 - We tried ping ponging this time
 - Created an inbox
+
+## 13/10/2025
+- still feel overwhelmed by where/when to start "simple" refactoring
+- liked the Rob's Strong Style Ping-Pong (TM)
+- also liked the strong style ping-pong since it helps us both practice navigating
+- we need to "try" more than "talk" because we have tests!!!
+- it is good to be able to bring things we've learned and practice them in a "safe sandbox"
