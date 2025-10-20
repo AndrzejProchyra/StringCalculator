@@ -2,7 +2,8 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.joining;
 
 public class StringCalculator {
     public int add(String numbers) {
@@ -26,9 +27,15 @@ public class StringCalculator {
             sum += n;
         }
         if (!negatives.isEmpty()) {
-            throw new IllegalArgumentException("Negatives not allowed: " + negatives.stream().map(String::valueOf).collect(Collectors.joining(", ")));
+            throw new IllegalArgumentException("Negatives not allowed: " + toCommaDelimitedString(negatives));
         }
         return sum;
+    }
+
+    private static String toCommaDelimitedString(List<Integer> nums) {
+        return nums.stream()
+                .map(String::valueOf)
+                .collect(joining(", "));
     }
 
     private static String getNewNumbers(String numbers, boolean hasNewDelimiter) {
