@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static java.util.stream.Collectors.joining;
@@ -16,11 +17,11 @@ public class StringCalculator {
             return 0;
 
         String[] splitNumbers = numbers.split("[" + delimiter + "\n]");
+        int[] applesauce = Arrays.stream(splitNumbers).mapToInt(Integer::parseInt).toArray();
 
         int sum = 0;
         List<Integer> negatives = new ArrayList<>();
-        for (String splitNumber : splitNumbers) {
-            int n = Integer.parseInt(splitNumber);
+        for (int n : applesauce) {
             if (n < 0) {
                 negatives.add(n);
             }
