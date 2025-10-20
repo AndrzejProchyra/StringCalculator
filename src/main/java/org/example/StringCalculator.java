@@ -8,29 +8,39 @@ import static java.util.stream.Collectors.joining;
 
 public class StringCalculator {
     public int add(String numbers) {
+        int sum = 0;
+        for (int n : parse(numbers)) {
+            sum += n;
+        }
+        return sum;
+    }
+
+    private static int[] parse(String numbers) {
         String delimiter = ",";
         boolean hasNewDelimiter = numbers.startsWith("//");
         delimiter = getNewDelimiter(numbers, hasNewDelimiter, delimiter);
         numbers = getNewNumbers(numbers, hasNewDelimiter);
 
         if (numbers.isEmpty())
-            return 0;
+            return new int[0];
 
         String[] splitNumbers = numbers.split("[" + delimiter + "\n]");
         int[] applesauce = Arrays.stream(splitNumbers).mapToInt(Integer::parseInt).toArray();
 
-        int sum = 0;
+        requireNonNegatives(applesauce);
+        return applesauce;
+    }
+
+    private static void requireNonNegatives(int[] applesauce) {
         List<Integer> negatives = new ArrayList<>();
         for (int n : applesauce) {
             if (n < 0) {
                 negatives.add(n);
             }
-            sum += n;
         }
         if (!negatives.isEmpty()) {
             throw new IllegalArgumentException("Negatives not allowed: " + toCommaDelimitedString(negatives));
         }
-        return sum;
     }
 
     private static String toCommaDelimitedString(List<Integer> nums) {
