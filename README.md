@@ -58,5 +58,7 @@ Next time
 
 ## 20/10/2025
 - Using Multi Player Chess Clock (https://multiplayerchessclock.com/game/39stoxz2khq8oolv)
-  - Navigator is the one "playing"
+  - Talker is the one "playing"
 - TODO: Write checklist for starting a pairing session
+- Terminology:
+  - Typer, Talker
