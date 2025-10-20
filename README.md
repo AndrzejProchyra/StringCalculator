@@ -55,3 +55,6 @@ Next time
 - also liked the strong style ping-pong since it helps us both practice navigating
 - we need to "try" more than "talk" because we have tests!!!
 - it is good to be able to bring things we've learned and practice them in a "safe sandbox"
+
+## 20/10/2025
+- Using Multi Player Chess Clock (https://multiplayerchessclock.com/game/39stoxz2khq8oolv)
