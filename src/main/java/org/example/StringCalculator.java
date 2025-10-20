@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StringCalculator {
     public int add(String numbers) {
@@ -25,7 +26,7 @@ public class StringCalculator {
             sum += n;
         }
         if (!negatives.isEmpty()) {
-            throw new IllegalArgumentException("Negatives not allowed: " + negatives.getFirst());
+            throw new IllegalArgumentException("Negatives not allowed: " + negatives.stream().map(String::valueOf).collect(Collectors.joining(", ")));
         }
         return sum;
     }
