@@ -62,3 +62,11 @@ Next time
 - TODO: Write checklist for starting a pairing session
 - Terminology:
   - Typer, Talker
+- We both had somewhat equal time from last time with 30~ minutes
+- I think Andrzej as the talker during refactoring was very helpful (Rob)
+- The clock helped us be more aware that Andrzej talked for 1 hour 20 minutes today, Rob didn't talk
+- Should maybe consider resetting clock each time, if we use clock
+- We shifted away from timer to strong style ping pong but today we did a lot of refactoring
+- Ping pong is meant for red green refactor, but since we were staying in refactor, what to do?
+- Is the root cause that we didn't refactor enough earlier?
+- Need to pay attention to when we are shifting into refactoring so that we can pivot
