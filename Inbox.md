@@ -7,3 +7,4 @@
 - Might want to refactor parse further because: right now it's scattered, split into paragraphs and it's a long method
 - Review Routine.md
 - Refactor test names
+- inside of add callCount is crosscutting concern-ish, could think about AOP or something else
