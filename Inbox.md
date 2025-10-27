@@ -9,3 +9,4 @@
 - Refactor test names
 - inside of add callCount is crosscutting concern-ish, could think about AOP or something else
 - add() could be a composed method like parse with increment(), parseNumbers(), and sum()
+- Add linter that checks for apple sauces
