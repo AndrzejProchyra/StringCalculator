@@ -98,6 +98,16 @@ class StringCalculatorTest {
                 .isZero();
     }
 
+    @Test
+    void add_one_number_count_is_one() {
+        var calculator = new StringCalculator();
+
+        calculator.add("1");
+
+        then(calculator.getCalledCount())
+                .isOne();
+    }
+
     private static void assertAdd(String numbers, int expected) {
         assertThat(new StringCalculator().add(numbers))
                 .isEqualTo(expected);
