@@ -86,9 +86,7 @@ class StringCalculatorTest {
                 .hasMessage("Negatives not allowed: -1, -1, -7, -2");
     }
 
-    // Adding one number and confirming add count = 1
     // Adding more than one number and confirming count is more than one
-    // Adding no numbers and confirming count equals zero
 
     @Test
     void no_add_call_count_is_zero() {
@@ -106,6 +104,19 @@ class StringCalculatorTest {
 
         then(calculator.getCalledCount())
                 .isOne();
+    }
+
+    @Test
+    void invoke_add_multiple_times_count_is_more_than_one() {
+        var calculator = new StringCalculator();
+        calculator.add("1");
+        calculator.add("4");
+        calculator.add("6");
+
+        int calledCount = calculator.getCalledCount();
+
+        then(calledCount)
+                .isEqualTo(3);
     }
 
     private static void assertAdd(String numbers, int expected) {
