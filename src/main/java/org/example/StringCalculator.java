@@ -7,7 +7,11 @@ import java.util.List;
 import static java.util.stream.Collectors.joining;
 
 public class StringCalculator {
+
+    private int callCount = 0;
+
     public int add(String numbers) {
+        callCount++;
         int sum = 0;
         for (int n : parse(numbers)) {
             sum += n;
@@ -64,6 +68,6 @@ public class StringCalculator {
     }
 
     public int getCalledCount() {
-        return 0;
+        return callCount;
     }
 }
