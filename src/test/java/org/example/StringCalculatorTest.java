@@ -11,6 +11,7 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.assertj.core.api.BDDAssertions.then;
 
 class StringCalculatorTest {
     @Test
@@ -83,6 +84,18 @@ class StringCalculatorTest {
     void add_with_multiple_negative_numbers_throws_and_shows_all_of_them_in_the_exception_message() {
         assertThatThrownBy(() -> new StringCalculator().add("-1,-1,3,-7,-2"))
                 .hasMessage("Negatives not allowed: -1, -1, -7, -2");
+    }
+
+    // Adding one number and confirming add count = 1
+    // Adding more than one number and confirming count is more than one
+    // Adding no numbers and confirming count equals zero
+
+    @Test
+    void no_add_call_count_is_zero() {
+        var calculator = new StringCalculator();
+
+        then(calculator.getCalledCount())
+                .isZero();
     }
 
     private static void assertAdd(String numbers, int expected) {

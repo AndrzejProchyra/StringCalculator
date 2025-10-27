@@ -63,4 +63,7 @@ public class StringCalculator {
         return delimiter;
     }
 
+    public int getCalledCount() {
+        return 0;
+    }
 }
