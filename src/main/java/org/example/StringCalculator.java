@@ -12,6 +12,7 @@ public class StringCalculator {
 
     public int add(String numbers) {
         callCount++;
+
         int sum = 0;
         for (int n : parse(numbers)) {
             sum += n;
