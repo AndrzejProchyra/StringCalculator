@@ -6,3 +6,4 @@
 - Trying to focus on parsing instead of validating, but feel uneasy about not validating (we are not supposed to be validating based on doc)
 - Might want to refactor parse further because: right now it's scattered, split into paragraphs and it's a long method
 - Review Routine.md
+- Refactor test names
