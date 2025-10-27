@@ -4,5 +4,5 @@
 # Other Thoughts
 - ~~Rob wants to refactor the duplication for summing with either a comma or newline, but we are deciding to leave it for now~~ because no longer relevant
 - Trying to focus on parsing instead of validating, but feel uneasy about not validating (we are not supposed to be validating based on doc)
-- We are leaving applesauce at line 28, also might want to refactor parse further because: right now it's scattered, split into paragraphs and it's a long method
+- Might want to refactor parse further because: right now it's scattered, split into paragraphs and it's a long method
 - Review Routine.md

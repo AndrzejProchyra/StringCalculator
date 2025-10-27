@@ -25,10 +25,10 @@ public class StringCalculator {
             return new int[0];
 
         String[] splitNumbers = numbers.split("[" + delimiter + "\n]");
-        int[] applesauce = Arrays.stream(splitNumbers).mapToInt(Integer::parseInt).toArray();
+        int[] splitNumbersAsInt = Arrays.stream(splitNumbers).mapToInt(Integer::parseInt).toArray();
 
-        requireNonNegatives(applesauce);
-        return applesauce;
+        requireNonNegatives(splitNumbersAsInt);
+        return splitNumbersAsInt;
     }
 
     private static void requireNonNegatives(int[] applesauce) {
