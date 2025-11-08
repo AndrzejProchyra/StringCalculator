@@ -1,9 +1,12 @@
-# Steps
+# Preparation Steps
+Run the tests to ensure IDE is working
 Start chess clock timer from scratch
 Share link
 Start strong style ping ponging
 Use mob.sh
 
+# Actual Routine
+Run the tests
 
 # General guidelines
 If someone has an idea and wants to try it, that person should switch to navigator instead of taking over
