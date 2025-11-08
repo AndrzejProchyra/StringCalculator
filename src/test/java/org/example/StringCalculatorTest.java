@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -118,6 +119,23 @@ class StringCalculatorTest {
         then(calledCount)
                 .isEqualTo(3);
     }
+
+    @Test
+    void should_trigger_an_add_occurred_event_when_add_is_called() {
+        //given
+        var calculator = new StringCalculator();
+        AtomicInteger calledCount = new AtomicInteger();
+        calculator.subscribe(calledCount::getAndIncrement);
+
+        //when
+        calculator.add("1");
+        calculator.add("4");
+        calculator.add("6");
+
+        then(calledCount.get())
+                .isEqualTo(3);
+    }
+
 
     private static void assertAdd(String numbers, int expected) {
         assertThat(new StringCalculator().add(numbers))

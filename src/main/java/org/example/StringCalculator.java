@@ -7,11 +7,13 @@ import java.util.List;
 import static java.util.stream.Collectors.joining;
 
 public class StringCalculator {
+    private List<AddOccurredSubscriber> addOccurredSubscribers = new ArrayList<>();
 
     private int callCount = 0;
 
     public int add(String numbers) {
         callCount++;
+        addOccurredSubscribers.forEach(AddOccurredSubscriber::handleAddOccurredEvent);
 
         int sum = 0;
         for (int n : parse(numbers)) {
@@ -70,5 +72,9 @@ public class StringCalculator {
 
     public int getCalledCount() {
         return callCount;
+    }
+
+    public void subscribe(AddOccurredSubscriber subscriber) {
+        addOccurredSubscribers.add(subscriber);
     }
 }
