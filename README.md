@@ -70,3 +70,8 @@ Next time
 - Ping pong is meant for red green refactor, but since we were staying in refactor, what to do?
 - Is the root cause that we didn't refactor enough earlier?
 - Need to pay attention to when we are shifting into refactoring so that we can pivot
+
+## 07/11/2025
+- Discussed and implemented step 8 in Java!
+- Next time we will revert and try to do it again
+- we think this is the observer pattern but need to refine language (subject/observer vs publish/subscribe)
