@@ -26,11 +26,11 @@ public class StringCalculator {
         addOccurredSubscribers.forEach(AddOccurredSubscriber::handleAddOccurredEvent);
     }
 
-    private static int[] parse(String numbers) {
+    private static int[] parse(String numbers) { // todo: Long Method
         String delimiter = ",";
         boolean hasNewDelimiter = numbers.startsWith("//");
-        delimiter = getNewDelimiter(numbers, hasNewDelimiter, delimiter);
-        numbers = getNewNumbers(numbers, hasNewDelimiter);
+        delimiter = getNewDelimiter(numbers, hasNewDelimiter, delimiter); // todo: boolean parameter, long parameter list
+        numbers = getNewNumbers(numbers, hasNewDelimiter); // todo: boolean parameter
 
         if (numbers.isEmpty())
             return new int[0];
