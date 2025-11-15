@@ -13,13 +13,16 @@ public class StringCalculator {
 
     public int add(String numbers) {
         callCount++;
-        addOccurredSubscribers.forEach(AddOccurredSubscriber::handleAddOccurredEvent);
-
+        notifySubscribers();
         int sum = 0;
         for (int n : parse(numbers)) {
             sum += n;
         }
         return sum;
+    }
+
+    private void notifySubscribers() {
+        addOccurredSubscribers.forEach(AddOccurredSubscriber::handleAddOccurredEvent);
     }
 
     private static int[] parse(String numbers) {
