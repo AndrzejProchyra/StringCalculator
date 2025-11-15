@@ -136,6 +136,10 @@ class StringCalculatorTest {
                 .isEqualTo(3);
     }
 
+    @Test
+    void should_allow_numbers_less_than_or_equal_to_1000() {
+        assertAdd("1000,1", 1001);
+    }
 
     private static void assertAdd(String numbers, int expected) {
         assertThat(new StringCalculator().add(numbers))
