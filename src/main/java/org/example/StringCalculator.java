@@ -37,6 +37,9 @@ public class StringCalculator {
         String[] splitNumbers = numbers.split("[" + delimiter + "\n]");
         int[] splitNumbersAsInt = Arrays.stream(splitNumbers).mapToInt(Integer::parseInt).toArray();
 
+        splitNumbersAsInt = Arrays.stream(splitNumbersAsInt)
+                .filter(n -> n <= 1000)
+                .toArray();
         requireNonNegatives(splitNumbersAsInt);
         return splitNumbersAsInt;
     }

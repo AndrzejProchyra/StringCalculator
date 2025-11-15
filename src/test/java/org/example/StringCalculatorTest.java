@@ -141,6 +141,11 @@ class StringCalculatorTest {
         assertAdd("1000,1", 1001);
     }
 
+    @Test
+    void should_ignore_numbers_greater_than_1000() {
+        assertAdd("1001,2", 2);
+    }
+
     private static void assertAdd(String numbers, int expected) {
         assertThat(new StringCalculator().add(numbers))
                 .isEqualTo(expected);
