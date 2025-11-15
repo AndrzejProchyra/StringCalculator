@@ -3,6 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.joining;
 
@@ -35,11 +36,11 @@ public class StringCalculator {
             return new int[0];
 
         String[] splitNumbers = numbers.split("[" + delimiter + "\n]");
-        int[] splitNumbersAsInt = Arrays.stream(splitNumbers).mapToInt(Integer::parseInt).toArray();
+        IntStream intStream = Arrays.stream(splitNumbers).mapToInt(Integer::parseInt);
 
-        splitNumbersAsInt = Arrays.stream(splitNumbersAsInt)
-                .filter(n -> n <= 1000)
-                .toArray();
+        intStream = intStream.filter(n -> n <= 1000);
+
+        int[] splitNumbersAsInt = intStream.toArray();
         requireNonNegatives(splitNumbersAsInt);
         return splitNumbersAsInt;
     }
