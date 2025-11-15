@@ -12,24 +12,9 @@ public class StringCalculator {
 
     private int callCount = 0;
 
-    public int add(String numbers) {
-        callCount++;
-        notifySubscribers();
-        int sum = 0;
-        for (int n : parse(numbers)) {
-            sum += n;
-        }
-        return sum;
-    }
-
-    private void notifySubscribers() {
-        addOccurredSubscribers.forEach(AddOccurredSubscriber::handleAddOccurredEvent);
-    }
-
     private static int[] parse(String numbers) { // todo: Long Method
-        String delimiter = ",";
         boolean hasNewDelimiter = numbers.startsWith("//");
-        delimiter = getNewDelimiter(numbers, hasNewDelimiter, delimiter); // todo: boolean parameter, long parameter list
+        String delimiter = getNewDelimiter(numbers, hasNewDelimiter); // todo: boolean parameter
         numbers = getNewNumbers(numbers, hasNewDelimiter); // todo: boolean parameter
 
         if (numbers.isEmpty())
@@ -70,11 +55,26 @@ public class StringCalculator {
         return numbers;
     }
 
-    private static String getNewDelimiter(String numbers, boolean hasNewDelimiter, String delimiter) {
+    private static String getNewDelimiter(String numbers, boolean hasNewDelimiter) {
+        String delimiter = ",";
         if (hasNewDelimiter) {
             delimiter = String.valueOf(numbers.charAt(2));
         }
         return delimiter;
+    }
+
+    public int add(String numbers) {
+        callCount++;
+        notifySubscribers();
+        int sum = 0;
+        for (int n : parse(numbers)) {
+            sum += n;
+        }
+        return sum;
+    }
+
+    private void notifySubscribers() {
+        addOccurredSubscribers.forEach(AddOccurredSubscriber::handleAddOccurredEvent);
     }
 
     public int getCalledCount() {
