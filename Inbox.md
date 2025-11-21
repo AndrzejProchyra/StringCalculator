@@ -6,8 +6,11 @@
 - Trying to focus on parsing instead of validating, but feel uneasy about not validating (we are not supposed to be validating based on doc)
 - Might want to refactor parse further because: right now it's scattered, split into paragraphs and it's a long method, using different transformations
 - Review Routine.md
-- Refactor test names
-- the tests are confusing in initializing a new delimiter, in Rob's opinion
+- Tests
+  - Split out delimiter tests
+  - Explore other tests that could be split out
+  - Refactor test names
+  - the tests are confusing in initializing a new delimiter, in Rob's opinion
 - inside of add callCount is crosscutting concern-ish, could think about AOP or something else
 - add() could be a composed method like parse with increment(), parseNumbers(), and sum()
 - Add linter that checks for apple sauces
