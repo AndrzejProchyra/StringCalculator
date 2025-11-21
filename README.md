@@ -75,3 +75,13 @@ Next time
 - Discussed and implemented step 8 in Java!
 - Next time we will revert and try to do it again
 - we think this is the observer pattern but need to refine language (subject/observer vs publish/subscribe)
+
+## 15/11/2025
+Retro:
+  - How did it feel?
+    - Good
+  - What do we want to do more of?
+    - Side quests are good! We learn something from each of them
+    - Defer some side quests that would be better to do later — write them down to have confidence that you won't forget them
+  - What can we try?
+    - Andrzej will join the JBrains Experience to see how it works
