@@ -1,6 +1,7 @@
 # StringCalculator
 
 ## Open Questions
+
 At the end we tried to refactor but we ended up implementing a new feature instead.
 "Obviously" if we are intending to refactor we should only do that, but how would we have prevented adding the feature?
 
@@ -23,33 +24,37 @@ At the end we tried to refactor but we ended up implementing a new feature inste
       anything we wrote down
 
 Next time
+
 - Continue with the String Calculator kata
 
 ## 29/09/2025
+
 1. How did that feel?
-   - Andrzej: Good and productive
-   - Unsure of TDD flow
-   - Rob: Good learning opportunities
+    - Andrzej: Good and productive
+    - Unsure of TDD flow
+    - Rob: Good learning opportunities
 2. What did we do that we want to make sure we do more of?
-   - Deferring side quests and writing things down
-   - Some implicit things: switching over, communicating well
-   - Finding the middle ground between flow and experimentation, we are definitely improving at this
-2.5 What isn't working
-   - Running out of time, is that normal?
-   - Forgetting refactoring
+    - Deferring side quests and writing things down
+    - Some implicit things: switching over, communicating well
+    - Finding the middle ground between flow and experimentation, we are definitely improving at this
+      2.5 What isn't working
+    - Running out of time, is that normal?
+    - Forgetting refactoring
 3. What can we try next time?
-   - Keep an inbox
-   - Switching on green or ping pong?
+    - Keep an inbox
+    - Switching on green or ping pong?
 4. What we experimented with:
-   - mob.sh - Required some setup, but worked well with using the URL so we could both hear
+    - mob.sh - Required some setup, but worked well with using the URL so we could both hear
 
 ## 06/10/2025
+
 - Andrzej: Felt good again, making progress
 - Rob: Feeling frustrated/unsure, it is hard to "slow" down
 - We tried ping ponging this time
 - Created an inbox
 
 ## 13/10/2025
+
 - still feel overwhelmed by where/when to start "simple" refactoring
 - liked the Rob's Strong Style Ping-Pong (TM)
 - also liked the strong style ping-pong since it helps us both practice navigating
@@ -57,11 +62,12 @@ Next time
 - it is good to be able to bring things we've learned and practice them in a "safe sandbox"
 
 ## 20/10/2025
+
 - Using Multi Player Chess Clock (https://multiplayerchessclock.com/game/39stoxz2khq8oolv)
-  - Talker is the one "playing"
+    - Talker is the one "playing"
 - TODO: Write checklist for starting a pairing session
 - Terminology:
-  - Typer, Talker
+    - Typer, Talker
 - We both had somewhat equal time from last time with 30~ minutes
 - I think Andrzej as the talker during refactoring was very helpful (Rob)
 - The clock helped us be more aware that Andrzej talked for 1 hour 20 minutes today, Rob didn't talk
@@ -72,16 +78,37 @@ Next time
 - Need to pay attention to when we are shifting into refactoring so that we can pivot
 
 ## 07/11/2025
+
 - Discussed and implemented step 8 in Java!
 - Next time we will revert and try to do it again
 - we think this is the observer pattern but need to refine language (subject/observer vs publish/subscribe)
 
 ## 15/11/2025
+
 Retro:
-  - How did it feel?
+
+- How did it feel?
     - Good
-  - What do we want to do more of?
+- What do we want to do more of?
     - Side quests are good! We learn something from each of them
-    - Defer some side quests that would be better to do later — write them down to have confidence that you won't forget them
-  - What can we try?
+    - Defer some side quests that would be better to do later — write them down to have confidence that you won't forget
+      them
+- What can we try?
     - Andrzej will join the JBrains Experience to see how it works
+
+## 21/11/2025
+
+Retro:
+
+- Rob felt that he was interrupting the navigator a lot and asking too many questions
+- Andrzej felt that this was OK because he didn't have a good idea where to go and it helped him think.
+- Learning when to go off on a tangent and when to use the inbox is a valuable skill
+- What can we try?
+  - Maybe we had too long a preamble?
+  - Add more structure so that we spend more time coding
+
+Notes:
+
+- We tried to implement the long delimiters requirement but the code is not open and indexes into the input string with
+  hard-coded values and constructs a regex assuming a single-character delimiter. We therefore need to refactor to
+  generalise this. BUT SEE THE OPEN QUESTION - ask JB?
