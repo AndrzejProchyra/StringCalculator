@@ -12,7 +12,7 @@ public class StringCalculator {
 
     private int callCount = 0;
 
-    private static int[] parse(String input) { // todo: Long Method
+    private int[] parse(String input) { // todo: Long Method
         Input wrappedInput = new Input(input);
         boolean hasNewDelimiter = wrappedInput.getInput().startsWith("//");
         // parse should take in an input because it includes "delimiter" + "numbers"
@@ -25,7 +25,7 @@ public class StringCalculator {
         // We stream this and map to int to get a stream of integers
         // We convert the stream to [1, 2, 3, 4]
 
-        String delimiter = getNewDelimiter(wrappedInput.getInput(), hasNewDelimiter); // todo: boolean parameter
+        String delimiter = wrappedInput.getNewDelimiter(hasNewDelimiter); // todo: boolean parameter
         String numbers = getNewNumbers(wrappedInput.getInput(), hasNewDelimiter); // todo: boolean parameter
 
         if (wrappedInput.getInput().isEmpty())
@@ -64,14 +64,6 @@ public class StringCalculator {
             numbers = numbers.substring(4);
         }
         return numbers;
-    }
-
-    private static String getNewDelimiter(String numbers, boolean hasNewDelimiter) {
-        String delimiter = ",";
-        if (hasNewDelimiter) {
-            delimiter = String.valueOf(numbers.charAt(2));
-        }
-        return delimiter;
     }
 
     public int add(String numbers) {

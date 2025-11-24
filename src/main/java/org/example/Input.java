@@ -10,4 +10,12 @@ public class Input {
     public String getInput() {
         return input;
     }
+
+    String getNewDelimiter(boolean hasNewDelimiter) {
+        String delimiter = ",";
+        if (hasNewDelimiter) {
+            delimiter = String.valueOf(getInput().charAt(2));
+        }
+        return delimiter;
+    }
 }
