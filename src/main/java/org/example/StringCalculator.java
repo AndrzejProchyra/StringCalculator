@@ -14,6 +14,16 @@ public class StringCalculator {
 
     private static int[] parse(String numbers) { // todo: Long Method
         boolean hasNewDelimiter = numbers.startsWith("//");
+        // parse should take in an input because it includes "delimiter" + "numbers"
+        // can create new Input, or instance of some other class that wraps the String input
+        // this instance might return a regex or just the collection of integers
+
+        // These are the intermediary steps that we have right now
+        // getNewNumbers returns "1,2,3,4" (assuming comma delimiter)
+        // splitNumbers is then ["1", "2", "3", "4"]
+        // We stream this and map to int to get a stream of integers
+        // We convert the stream to [1, 2, 3, 4]
+
         String delimiter = getNewDelimiter(numbers, hasNewDelimiter); // todo: boolean parameter
         numbers = getNewNumbers(numbers, hasNewDelimiter); // todo: boolean parameter
 

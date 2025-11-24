@@ -146,6 +146,13 @@ class StringCalculatorTest {
         assertAdd("1001,2", 2);
     }
 
+    // Rob is breaking the rules!
+    // We are leaving this failing test to make sure that we don't implement too much
+    @Test
+    void should_accept_delimiters_of_any_length() {
+        assertAdd("//[***]\\n1***2***3", 6);
+    }
+
     private static void assertAdd(String numbers, int expected) {
         assertThat(new StringCalculator().add(numbers))
                 .isEqualTo(expected);
