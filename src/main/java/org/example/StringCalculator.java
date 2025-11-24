@@ -13,7 +13,8 @@ public class StringCalculator {
     private int callCount = 0;
 
     private static int[] parse(String input) { // todo: Long Method
-        boolean hasNewDelimiter = input.startsWith("//");
+        Input wrappedInput = new Input(input);
+        boolean hasNewDelimiter = wrappedInput.getInput().startsWith("//");
         // parse should take in an input because it includes "delimiter" + "numbers"
         // can create new Input, or instance of some other class that wraps the String input
         // this instance might return a regex or just the collection of integers
@@ -24,13 +25,13 @@ public class StringCalculator {
         // We stream this and map to int to get a stream of integers
         // We convert the stream to [1, 2, 3, 4]
 
-        String delimiter = getNewDelimiter(input, hasNewDelimiter); // todo: boolean parameter
-        input = getNewNumbers(input, hasNewDelimiter); // todo: boolean parameter
+        String delimiter = getNewDelimiter(wrappedInput.getInput(), hasNewDelimiter); // todo: boolean parameter
+        String numbers = getNewNumbers(wrappedInput.getInput(), hasNewDelimiter); // todo: boolean parameter
 
-        if (input.isEmpty())
+        if (wrappedInput.getInput().isEmpty())
             return new int[0];
 
-        String[] splitNumbers = input.split("[" + delimiter + "\n]");
+        String[] splitNumbers = numbers.split("[" + delimiter + "\n]");
         IntStream intStream = Arrays.stream(splitNumbers).mapToInt(Integer::parseInt);
 
         intStream = intStream.filter(n -> n <= 1000);
