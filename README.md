@@ -112,3 +112,13 @@ Notes:
 - We tried to implement the long delimiters requirement but the code is not open and indexes into the input string with
   hard-coded values and constructs a regex assuming a single-character delimiter. We therefore need to refactor to
   generalise this. BUT SEE THE OPEN QUESTION - ask JB?
+
+
+## 24/11/2025
+
+- Got started quicker, not too many tangents, Andrzej feels that he is imposing his ideas too much
+- Rob practiced Woody Zuill type listening + inbox and didn't feel there was imposition
+- Also tried out keeping a failing test to ensure we didn't accidently implement behavior, but it felt weird
+  - It was an attempt at a feedback loop of only changing behavior and not going too far
+- What can we try next?
+  - Andrzej wants to try writing stuff out
