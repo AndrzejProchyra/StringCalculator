@@ -70,7 +70,7 @@ class StringCalculatorTest {
     }
 
     @Test
-    @Disabled("Failing. We are not sure if multiple delimiters should be supported.")
+    @Disabled("Failing. We are not sure if different delimiters should be supported at the same time.")
     void add_two_numbers_with_pipe_custom_delimiter_and_comma_default_delimiter() {
         assertAdd("//|\n5|7,4", 16);
     }
