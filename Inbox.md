@@ -1,5 +1,13 @@
 # Test List
 
+## Current Task
+- Overall Goal: refactor parse to allow for step 10
+  - delimiters need to be of any length and surrounded by square brackets
+  - getNewDelimiter assumes delimeter is single character at position 2
+  - getNewNumbers assumes the numbers start at index 4
+  - getSplitNumbers assumes the delimiter has length one
+  - Next step (maybe): get index of new line, which will allow us to more programmatically get delimiter and numbers and will allow a delimiter of any length
+
 # Other Thoughts
 
 - ~~Rob wants to refactor the duplication for summing with either a comma or newline, but we are deciding to leave it
@@ -19,7 +27,7 @@
 - Add linter that checks for apple sauces
 - the functionality from rule 3 states that the delimiter can be comma or new line, without specifying as a new
   delimiter. but on line 37 in parse we are hardcoding the new line as a delimiter which Rob thinks is confusing
-- refactor parse to allow for steps 10 - 12
+
 - finish steps 10 - 12
 - after steps 10 through 12:
     - Lines 29 through 30 mapping to int and validation
