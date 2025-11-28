@@ -14,10 +14,6 @@ public class StringCalculator {
 
     private int[] parse(String input) { // todo: Long Method
         Input wrappedInput = new Input(input);
-        // parse should take in an input because it includes "delimiter" + "numbers"
-        // can create new Input, or instance of some other class that wraps the String input
-        // this instance might return a regex or just the collection of integers
-
         // These are the intermediary steps that we have right now
         // getNewNumbers returns "1,2,3,4" (assuming comma delimiter)
         // splitNumbers is then ["1", "2", "3", "4"]
