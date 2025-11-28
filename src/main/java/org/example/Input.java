@@ -7,24 +7,20 @@ public class Input {
         this.input = input;
     }
 
-    public String getInput() {
-        return input;
-    }
-
     String getNewDelimiter() {
         boolean hasNewDelimiter = input.startsWith("//");
         String delimiter = ",";
         if (hasNewDelimiter) {
-            delimiter = String.valueOf(getInput().charAt(2));
+            delimiter = String.valueOf(input.charAt(2));
         }
         return delimiter;
     }
 
     String getNewNumbers() {
-        boolean hasNewDelimiter = getInput().startsWith("//");
-        String numbers = getInput();
+        boolean hasNewDelimiter = input.startsWith("//");
+        String numbers = input;
         if (hasNewDelimiter) {
-            numbers = getInput().substring(4);
+            numbers = input.substring(4);
         }
         return numbers;
     }
