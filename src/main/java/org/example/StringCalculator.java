@@ -14,7 +14,6 @@ public class StringCalculator {
 
     private int[] parse(String input) { // todo: Long Method
         Input wrappedInput = new Input(input);
-        boolean hasNewDelimiter = wrappedInput.getInput().startsWith("//");
         // parse should take in an input because it includes "delimiter" + "numbers"
         // can create new Input, or instance of some other class that wraps the String input
         // this instance might return a regex or just the collection of integers
@@ -25,8 +24,8 @@ public class StringCalculator {
         // We stream this and map to int to get a stream of integers
         // We convert the stream to [1, 2, 3, 4]
 
-        String delimiter = wrappedInput.getNewDelimiter(hasNewDelimiter);
-        String numbers = getNewNumbers(wrappedInput.getInput(), hasNewDelimiter); // todo: boolean parameter
+        String delimiter = wrappedInput.getNewDelimiter();
+        String numbers = wrappedInput.getNewNumbers();
 
         if (wrappedInput.getInput().isEmpty())
             return new int[0];
@@ -57,13 +56,6 @@ public class StringCalculator {
         return nums.stream()
                 .map(String::valueOf)
                 .collect(joining(", "));
-    }
-
-    private static String getNewNumbers(String numbers, boolean hasNewDelimiter) {
-        if (hasNewDelimiter) {
-            numbers = numbers.substring(4);
-        }
-        return numbers;
     }
 
     public int add(String numbers) {
