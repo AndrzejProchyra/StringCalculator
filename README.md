@@ -122,3 +122,14 @@ Notes:
   - It was an attempt at a feedback loop of only changing behavior and not going too far
 - What can we try next?
   - Andrzej wants to try writing stuff out
+
+## 28/11/2025
+### What's helping?
+- Liked mob.sh, with room, and with 10 minute+ switching
+- Rob likes the integration between mob.sh and the room, but dislike that the timer doesn't as easily show real time that we did (like the chess clock did)
+- Small refactors help to keep momentum
+### What obstacles are there? (intentionally not saying slow)
+- Regex
+### What can we try?
+- Following the next step that is in the Inbox -> Current Task -> next step
+- Disciplined breaks (10 minutes, every hour)
