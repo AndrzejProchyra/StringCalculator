@@ -25,7 +25,7 @@ public class StringCalculator {
         // We stream this and map to int to get a stream of integers
         // We convert the stream to [1, 2, 3, 4]
 
-        String delimiter = wrappedInput.getNewDelimiter(hasNewDelimiter); // todo: boolean parameter
+        String delimiter = wrappedInput.getNewDelimiter(hasNewDelimiter);
         String numbers = getNewNumbers(wrappedInput.getInput(), hasNewDelimiter); // todo: boolean parameter
 
         if (wrappedInput.getInput().isEmpty())
