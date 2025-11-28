@@ -24,13 +24,10 @@ public class StringCalculator {
         // We stream this and map to int to get a stream of integers
         // We convert the stream to [1, 2, 3, 4]
 
-        String delimiter = wrappedInput.getNewDelimiter();
-        String numbers = wrappedInput.getNewNumbers();
-
         if (wrappedInput.getInput().isEmpty())
             return new int[0];
 
-        String[] splitNumbers = numbers.split("[" + delimiter + "\n]");
+        String[] splitNumbers = wrappedInput.getSplitNumbers();
         IntStream intStream = Arrays.stream(splitNumbers).mapToInt(Integer::parseInt);
 
         intStream = intStream.filter(n -> n <= 1000);

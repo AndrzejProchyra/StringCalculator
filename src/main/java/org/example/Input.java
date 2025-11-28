@@ -28,4 +28,8 @@ public class Input {
         }
         return numbers;
     }
+
+    String[] getSplitNumbers() {
+        return getNewNumbers().split("[" + getNewDelimiter() + "\n]");
+    }
 }
