@@ -30,6 +30,9 @@ public class Input {
     }
 
     String[] getSplitNumbers() {
+        if (input.isEmpty()) {
+            return new String[0];
+        }
         return getNewNumbers().split("[" + getNewDelimiter() + "\n]");
     }
 }

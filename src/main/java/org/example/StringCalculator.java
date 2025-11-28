@@ -24,9 +24,6 @@ public class StringCalculator {
         // We stream this and map to int to get a stream of integers
         // We convert the stream to [1, 2, 3, 4]
 
-        if (wrappedInput.getInput().isEmpty())
-            return new int[0];
-
         String[] splitNumbers = wrappedInput.getSplitNumbers();
         IntStream intStream = Arrays.stream(splitNumbers).mapToInt(Integer::parseInt);
 
