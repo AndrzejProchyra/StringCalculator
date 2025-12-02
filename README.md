@@ -104,8 +104,8 @@ Retro:
 - Andrzej felt that this was OK because he didn't have a good idea where to go and it helped him think.
 - Learning when to go off on a tangent and when to use the inbox is a valuable skill
 - What can we try?
-  - Maybe we had too long a preamble?
-  - Add more structure so that we spend more time coding
+    - Maybe we had too long a preamble?
+    - Add more structure so that we spend more time coding
 
 Notes:
 
@@ -113,23 +113,42 @@ Notes:
   hard-coded values and constructs a regex assuming a single-character delimiter. We therefore need to refactor to
   generalise this. BUT SEE THE OPEN QUESTION - ask JB?
 
-
 ## 24/11/2025
 
 - Got started quicker, not too many tangents, Andrzej feels that he is imposing his ideas too much
 - Rob practiced Woody Zuill type listening + inbox and didn't feel there was imposition
 - Also tried out keeping a failing test to ensure we didn't accidently implement behavior, but it felt weird
-  - It was an attempt at a feedback loop of only changing behavior and not going too far
+    - It was an attempt at a feedback loop of only changing behavior and not going too far
 - What can we try next?
-  - Andrzej wants to try writing stuff out
+    - Andrzej wants to try writing stuff out
 
 ## 28/11/2025
+
 ### What's helping?
+
 - Liked mob.sh, with room, and with 10 minute+ switching
-- Rob likes the integration between mob.sh and the room, but dislike that the timer doesn't as easily show real time that we did (like the chess clock did)
+- Rob likes the integration between mob.sh and the room, but dislike that the timer doesn't as easily show real time
+  that we did (like the chess clock did)
 - Small refactors help to keep momentum
+
 ### What obstacles are there? (intentionally not saying slow)
+
 - Regex
+
 ### What can we try?
+
 - Following the next step that is in the Inbox -> Current Task -> next step
 - Disciplined breaks (10 minutes, every hour)
+
+## 2/12/2025
+
+### What's helping?
+- I liked the disciplined break (Andrzej)
+
+### What obstacles are there?
+- We are losing some faith in mob.sh and losing commits! 😱
+- I am still derailing things, instead of writing them down - Andrzej
+- I am being a runaway driver... - Andrzej
+
+### What can we try?
+- Try a different kata? - Andrzej
