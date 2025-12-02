@@ -1,12 +1,13 @@
 # Preparation Steps
-Run the tests to ensure IDE is working
-Start chess clock timer from scratch
-Share link
-Start strong style ping ponging
-Use mob.sh
+- `export MOB_TIMER_ROOM="rob-andrzej"`  
+- Run the tests to ensure IDE is working
+- Share mob timer link
+- Start pairing
 
 # Actual Routine
-Run the tests
+- Run the tests
+- `mob s 10`
+- `mob break 10`
 
 # General guidelines
 If someone has an idea and wants to try it, that person should switch to navigator instead of taking over
