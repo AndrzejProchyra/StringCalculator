@@ -70,6 +70,11 @@ class StringCalculatorTest {
     }
 
     @Test
+    void add_two_numbers_with_percent_custom_delimiter() {
+        assertAdd("//%\n5%7", 12);
+    }
+
+    @Test
     void add_two_numbers_with_asterisk_custom_delimiter() {
         assertAdd("//*\n5*7", 12);
     }

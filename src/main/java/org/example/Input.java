@@ -7,28 +7,37 @@ public class Input {
         this.input = input;
     }
 
-    String getNewDelimiter() {
-        boolean hasNewDelimiter = input.startsWith("//");
-        String delimiter = ",";
-        if (hasNewDelimiter) {
-            delimiter = String.valueOf(input.charAt(2));
-        }
-        return delimiter;
-    }
-
-    String getNewNumbers() {
-        boolean hasNewDelimiter = input.startsWith("//");
-        String numbers = input;
-        if (hasNewDelimiter) {
-            numbers = input.substring(4);
-        }
-        return numbers;
-    }
-
     String[] getSplitNumbers() {
         if (input.isEmpty()) {
             return new String[0];
         }
-        return getNewNumbers().split("[" + getNewDelimiter() + "\n]");
+        String newDelimiter = getNewDelimiter();
+        if (newDelimiter.equals("|"))
+            newDelimiter = "\\|";
+        if (newDelimiter.equals("*"))
+            newDelimiter = "\\*";
+        return getNewNumbers().split( newDelimiter + "|\n");
+    }
+
+    private String getNewDelimiter() {
+        boolean hasNewDelimiter = input.startsWith("//");
+        String delimiter = ",";
+        if (hasNewDelimiter) {
+            delimiter = input.substring(2, getNewLineIndex());
+        }
+        return delimiter;
+    }
+
+    private String getNewNumbers() {
+        boolean hasNewDelimiter = input.startsWith("//");
+        String numbers = input;
+        if (hasNewDelimiter) {
+            numbers = input.substring(getNewLineIndex() + 1);
+        }
+        return numbers;
+    }
+
+    private int getNewLineIndex() {
+        return input.indexOf("\n");
     }
 }
