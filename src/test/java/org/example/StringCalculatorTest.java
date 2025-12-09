@@ -170,6 +170,7 @@ class StringCalculatorTest {
     void should_accept_metacharacter_delimiters_of_any_length_surrounded_by_square_brackets() {
         assertAdd("//[***]\n1***2***3", 6);
         assertAdd("//[|||]\n1|||2|||3", 6);
+        assertAdd("//[..]\n1..2..3", 6);
     }
 
     private static void assertAdd(String numbers, int expected) {
