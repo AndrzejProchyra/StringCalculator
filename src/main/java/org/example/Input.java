@@ -12,15 +12,18 @@ public class Input {
             return new String[0];
         }
         String newDelimiter = getNewDelimiter();
+        if (newDelimiter.equals("|"))
+            newDelimiter = "\\|";
+        newDelimiter = newDelimiter.replace("*", "\\*");
+        return getNewNumbers().split(newDelimiter + "|\n");
+    }
+
+    private static String removeSurroundingSquareBrackets(String newDelimiter) {
         if (newDelimiter.startsWith("[")) {
             newDelimiter = newDelimiter.replace("[", "");
             newDelimiter = newDelimiter.replace("]", "");
         }
-        if (newDelimiter.equals("|"))
-            newDelimiter = "\\|";
-        if (newDelimiter.equals("*"))
-            newDelimiter = "\\*";
-        return getNewNumbers().split(newDelimiter + "|\n");
+        return newDelimiter;
     }
 
     private String getNewDelimiter() {
@@ -29,7 +32,7 @@ public class Input {
         if (hasNewDelimiter) {
             delimiter = input.substring(2, getNewLineIndex());
         }
-        return delimiter;
+        return removeSurroundingSquareBrackets(delimiter);
     }
 
     private String getNewNumbers() {
