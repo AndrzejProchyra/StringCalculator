@@ -12,11 +12,15 @@ public class Input {
             return new String[0];
         }
         String newDelimiter = getNewDelimiter();
+        if (newDelimiter.startsWith("[")) {
+            newDelimiter = newDelimiter.replace("[", "");
+            newDelimiter = newDelimiter.replace("]", "");
+        }
         if (newDelimiter.equals("|"))
             newDelimiter = "\\|";
         if (newDelimiter.equals("*"))
             newDelimiter = "\\*";
-        return getNewNumbers().split( newDelimiter + "|\n");
+        return getNewNumbers().split(newDelimiter + "|\n");
     }
 
     private String getNewDelimiter() {
