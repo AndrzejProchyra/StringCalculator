@@ -160,7 +160,7 @@ class StringCalculatorTest {
     // We are leaving this failing test to make sure that we don't implement too much
     @Test
     void should_accept_delimiters_of_any_length() {
-        assertAdd("//[***]\n1***2***3", 6);
+        assertAdd("//;;;\n1;;;2;;;3", 6);
     }
 
     private static void assertAdd(String numbers, int expected) {
