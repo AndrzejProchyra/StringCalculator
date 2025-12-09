@@ -152,3 +152,24 @@ Notes:
 
 ### What can we try?
 - Try a different kata? - Andrzej
+
+## 9/12/2025
+
+### Gut feeling
+- Still useful and we discuss interesting things
+- Frustrating (about the kata)
+- More positive
+
+### What's helping?
+- mob.sh + setting a goal
+- regular cadence
+- openness +1
+- having a routine (Rob)
+- squashing the tiny commits helped Rob feel better
+
+### What obstacles are there?
+- Regex
+
+### What can we try?
+- Read the prime directive of retros before the retro
+- Use the next time to try to actually finish this, and then drop it regardless
