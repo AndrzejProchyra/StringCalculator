@@ -12,10 +12,15 @@ public class Input {
             return new String[0];
         }
         String newDelimiter = getNewDelimiter();
+        newDelimiter = handleMetacharacters(newDelimiter);
+        return getNewNumbers().split(newDelimiter + "|\n");
+    }
+
+    private static String handleMetacharacters(String newDelimiter) {
         newDelimiter = newDelimiter.replace("*", "\\*");
         newDelimiter = newDelimiter.replace("|", "\\|");
         newDelimiter = newDelimiter.replace(".", "\\.");
-        return getNewNumbers().split(newDelimiter + "|\n");
+        return newDelimiter;
     }
 
     private static String removeSurroundingSquareBrackets(String newDelimiter) {
