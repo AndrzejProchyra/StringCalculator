@@ -25,8 +25,7 @@ public class Input {
 
     private static String removeSurroundingSquareBrackets(String newDelimiter) {
         if (newDelimiter.startsWith("[")) {
-            newDelimiter = newDelimiter.replace("[", "");
-            newDelimiter = newDelimiter.replace("]", "");
+            newDelimiter = newDelimiter.substring(1, newDelimiter.indexOf("]"));
         }
         return newDelimiter;
     }
