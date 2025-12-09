@@ -12,9 +12,8 @@ public class Input {
             return new String[0];
         }
         String newDelimiter = getNewDelimiter();
-        if (newDelimiter.equals("|"))
-            newDelimiter = "\\|";
         newDelimiter = newDelimiter.replace("*", "\\*");
+        newDelimiter = newDelimiter.replace("|", "\\|");
         return getNewNumbers().split(newDelimiter + "|\n");
     }
 
