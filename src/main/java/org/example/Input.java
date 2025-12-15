@@ -34,13 +34,17 @@ public class Input {
         String delimiter = ",";
         if (hasNewDelimiter) {
             delimiter = input.substring(2, getNewLineIndex());
-            if (input.contains("]") && input.indexOf("]") != getNewLineIndex() - 1) {
+            if (hasMultipleDelimitersThatAreEachEnclosedInSquareBrackets()) {
                 return "[*%]";
             }
             delimiter = handleMetacharacters(delimiter);
             delimiter = removeSurroundingSquareBrackets(delimiter);
         }
         return delimiter;
+    }
+
+    private boolean hasMultipleDelimitersThatAreEachEnclosedInSquareBrackets() {
+        return input.contains("]") && input.indexOf("]") != getNewLineIndex() - 1;
     }
 
     private String getNewNumbers() {
