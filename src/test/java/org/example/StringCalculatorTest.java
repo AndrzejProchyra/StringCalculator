@@ -174,7 +174,6 @@ class StringCalculatorTest {
     }
 
     @Test
-    @Disabled
     void should_allow_multiple_delimiters() {
         assertAdd("//[*][%]\n1*2%3", 6);
     }

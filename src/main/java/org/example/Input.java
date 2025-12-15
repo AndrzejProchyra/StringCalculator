@@ -12,7 +12,6 @@ public class Input {
             return new String[0];
         }
         String newDelimiter = getNewDelimiter();
-        newDelimiter = handleMetacharacters(newDelimiter);
         return getNewNumbers().split(newDelimiter + "|\n");
     }
 
@@ -35,6 +34,7 @@ public class Input {
         String delimiter = ",";
         if (hasNewDelimiter) {
             delimiter = input.substring(2, getNewLineIndex());
+            delimiter = handleMetacharacters(delimiter);
         }
         return removeSurroundingSquareBrackets(delimiter);
     }
