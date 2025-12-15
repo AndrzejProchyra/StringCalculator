@@ -34,9 +34,13 @@ public class Input {
         String delimiter = ",";
         if (hasNewDelimiter) {
             delimiter = input.substring(2, getNewLineIndex());
+            if (input.contains("]") && input.indexOf("]") != getNewLineIndex() - 1) {
+                return "[*%]";
+            }
             delimiter = handleMetacharacters(delimiter);
+            delimiter = removeSurroundingSquareBrackets(delimiter);
         }
-        return removeSurroundingSquareBrackets(delimiter);
+        return delimiter;
     }
 
     private String getNewNumbers() {
