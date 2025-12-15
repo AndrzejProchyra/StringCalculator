@@ -35,7 +35,14 @@ public class Input {
         if (hasNewDelimiter) {
             delimiter = input.substring(2, getNewLineIndex());
             if (hasMultipleDelimitersThatAreEachEnclosedInSquareBrackets()) {
-                return "[*%]";
+                char[] ca = delimiter.substring(1, delimiter.length() - 1).toCharArray();
+                StringBuilder stringBuilder = new StringBuilder();
+                for (char ch : ca) {
+                    if (ch != '[' && ch != ']') {
+                        stringBuilder.append(ch);
+                    }
+                }
+                return "[" + stringBuilder + "]";
             }
             delimiter = handleMetacharacters(delimiter);
             delimiter = removeSurroundingSquareBrackets(delimiter);

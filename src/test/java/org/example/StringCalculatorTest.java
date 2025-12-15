@@ -178,6 +178,11 @@ class StringCalculatorTest {
         assertAdd("//[*][%]\n1*2%3", 6);
     }
 
+    @Test
+    void should_allow_many_multiple_delimiters() {
+        assertAdd("//[*][.][%]\n1*2.5%3", 11);
+    }
+
     private static void assertAdd(String numbers, int expected) {
         assertThat(new StringCalculator().add(numbers))
                 .isEqualTo(expected);
