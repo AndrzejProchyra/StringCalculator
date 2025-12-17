@@ -173,3 +173,22 @@ Notes:
 ### What can we try?
 - Read the prime directive of retros before the retro
 - Use the next time to try to actually finish this, and then drop it regardless
+
+## 15/12/2025
+
+### Gut feeling
+- Comfortable leaving this kata, can see how far we've come
+
+### What's helping?
+- Routine
+- Goal
+- Open to trying stuff
+
+### What obstacles are there?
+- Regex
+- the kata
+
+### What can we try?
+- A new kata
+- Read this whole retro before starting again
+- 
